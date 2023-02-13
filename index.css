@@ -83,14 +83,40 @@ body {
 }
 .done {
   position: absolute;
-  background-image: url(/typemaster/assets/mobile/image-phone-and-keyboard.jpg);
-  mix-blend-mode: multiply;
+  /* background-image: url(/typemaster/assets/mobile/image-phone-and-keyboard.jpg);*/
   width: 144px;
   height: 226px;
   top: 840px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-size: cover;
+}
+.iseven{
+  position: absolute;
+  width: 144px;
+  height: 226px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.isix{
+  display: none;
+}
+.ifive{
+  display: none;
+}
+.done::after {
+  content: "";
+  height: 226px;
+  width: 144px;
+  background: #f16718;
+  position: absolute;
+  z-index: 10;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: translateX(-1%);
+  left: 0px;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
 }
 .dtwo {
   position: absolute;
@@ -103,6 +129,7 @@ body {
   left: 155px;
   background-size: cover;
 }
+
 .hthree {
   position: absolute;
   width: 255px;
@@ -117,237 +144,257 @@ body {
   text-transform: uppercase;
   color: #162542;
 }
-.ptwo{
-    position: absolute;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 1240px;
-    color: #7b8bad;
-    width: 327px;
-    font-size: 16px;
-    line-height: 26px;
-    align-items: center;
-    margin-left: 24px;
+.ptwo {
+  position: absolute;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1240px;
+  color: #7b8bad;
+  width: 327px;
+  font-size: 16px;
+  line-height: 26px;
+  align-items: center;
+  margin-left: 24px;
 }
-.dthree{
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    background-color: #f16718;
-    margin-top: 1455px;
-    margin-left: 155px;
-    border-radius: 16px;
+.dthree {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-color: #f16718;
+  margin-top: 1455px;
+  margin-left: 155px;
+  border-radius: 16px;
 }
-.ithree{
-    margin-left: 20px;
-    margin-top: 22px;
+.ithree {
+  margin-left: 20px;
+  margin-top: 22px;
 }
-.hfour{
-    position: absolute;
-    width: 327px;
-    margin-top: 1568px;
-    font-style: normal;
-    font-weight: 900;
-    color: #162542;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    height: 56px;
-    text-transform: uppercase;
-    margin-left:24px;
+.hfour {
+  position: absolute;
+  width: 327px;
+  margin-top: 1568px;
+  font-style: normal;
+  font-weight: 900;
+  color: #162542;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  height: 56px;
+  text-transform: uppercase;
+  margin-left: 24px;
 }
-.pthree{
-    position: absolute;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 1648px;
-    color: #7b8bad;
-    width: 327px;
-    font-size: 16px;
-    line-height: 26px;
-    align-items: center;
-    margin-left: 24px;
+.pthree {
+  position: absolute;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1648px;
+  color: #7b8bad;
+  width: 327px;
+  font-size: 16px;
+  line-height: 26px;
+  align-items: center;
+  margin-left: 24px;
 }
-.dfour{
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    background-color: #f16718;
-    margin-top: 1816px;
-    margin-left: 155px;
-    border-radius: 16px;
+.dfour {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-color: #f16718;
+  margin-top: 1816px;
+  margin-left: 155px;
+  border-radius: 16px;
 }
-.ifour{
-    margin-left: 23px;
-    margin-top: 19px;
+.ifour {
+  margin-left: 23px;
+  margin-top: 19px;
 }
-.hfive{
-    position: absolute;
-    width: 327px;
-    margin-top: 1929px;
-    font-style: normal;
-    font-weight: 900;
-    color: #162542;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    height: 56px;
-    text-transform: uppercase;
-    margin-left:24px;
+.hfive {
+  position: absolute;
+  width: 327px;
+  margin-top: 1929px;
+  font-style: normal;
+  font-weight: 900;
+  color: #162542;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  height: 56px;
+  text-transform: uppercase;
+  margin-left: 24px;
 }
-.pfour{
-    position: absolute;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 2009px;
-    color: #7b8bad;
-    width: 327px;
-    font-size: 16px;
-    line-height: 26px;
-    align-items: center;
-    margin-left: 24px;
+.pfour {
+  position: absolute;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2009px;
+  color: #7b8bad;
+  width: 327px;
+  font-size: 16px;
+  line-height: 26px;
+  align-items: center;
+  margin-left: 24px;
 }
-.dfive{
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    background-color: #f16718;
-    margin-top: 2177px;
-    margin-left: 155px;
-    border-radius: 16px;
+.dfive {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-color: #f16718;
+  margin-top: 2177px;
+  margin-left: 155px;
+  border-radius: 16px;
 }
-.dfive>img{
-    margin-top: 23px;
-    margin-left: 16px;
+.dfive > img {
+  margin-top: 23px;
+  margin-left: 16px;
 }
-.hsix{
-    position: absolute;
-    width: 327px;
-    margin-top: 2290px;
-    font-style: normal;
-    font-weight: 900;
-    color: #162542;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    height: 56px;
-    text-transform: uppercase;
-    margin-left:24px;
+.hsix {
+  position: absolute;
+  width: 327px;
+  margin-top: 2290px;
+  font-style: normal;
+  font-weight: 900;
+  color: #162542;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  height: 56px;
+  text-transform: uppercase;
+  margin-left: 24px;
 }
-.pfive{
-    position: absolute;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 2370px;
-    color: #7b8bad;
-    width: 327px;
-    font-size: 16px;
-    line-height: 26px;
-    align-items: center;
-    margin-left: 24px;
+.pfive {
+  position: absolute;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2370px;
+  color: #7b8bad;
+  width: 327px;
+  font-size: 16px;
+  line-height: 26px;
+  align-items: center;
+  margin-left: 24px;
 }
-.dsix{
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    background-color: #f16718;
-    margin-top: 2538px;
-    margin-left: 155px;
-    border-radius: 16px;   
+.dsix {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-color: #f16718;
+  margin-top: 2538px;
+  margin-left: 155px;
+  border-radius: 16px;
 }
-.dsix>img{
-    margin-top: 16px;
-    margin-left: 17px;
+.dsix > img {
+  margin-top: 16px;
+  margin-left: 17px;
 }
-.hseven{
-    position: absolute;
-    width: 327px;
-    margin-top: 2651px;
-    font-style: normal;
-    font-weight: 900;
-    color: #162542;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    height: 56px;
-    text-transform: uppercase;
-    margin-left:24px;
+.hseven {
+  position: absolute;
+  width: 327px;
+  margin-top: 2651px;
+  font-style: normal;
+  font-weight: 900;
+  color: #162542;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  height: 56px;
+  text-transform: uppercase;
+  margin-left: 24px;
 }
-.psix{
-    position: absolute;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 2731px;
-    color: #7b8bad;
-    width: 327px;
-    font-size: 16px;
-    line-height: 26px;
-    align-items: center;
-    margin-left: 24px;
+.psix {
+  position: absolute;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2731px;
+  color: #7b8bad;
+  width: 327px;
+  font-size: 16px;
+  line-height: 26px;
+  align-items: center;
+  margin-left: 24px;
 }
-.pseven{
-    position: absolute;
-    width: 272px;
-    height: 26px;
-    font-style: normal;
-    font-weight: 500;
-    color: #7b8bad;
-    margin-top: 2931px;
-    margin-left: 51px;
+.pseven {
+  position: absolute;
+  width: 272px;
+  height: 26px;
+  font-style: normal;
+  font-weight: 500;
+  color: #7b8bad;
+  margin-top: 2931px;
+  margin-left: 51px;
 }
-@media screen and (min-width:768px){
-  body{
+@media screen and (min-width: 768px) {
+  body {
     margin: 0;
     padding: 0;
     background-image: url(/typemaster/assets/tablet/image-keyboard.jpg);
     background-repeat: no-repeat;
-    background-size: 478px,425px;
+    background-size: 478px, 425px;
     background-position-x: 447px;
-    background-position-y:160px ;
+    background-position-y: 160px;
   }
-  .bone{
+  .bone {
     margin-left: 568px;
     width: 175px;
     height: 58px;
   }
-  .itwo{
-   display: none ;
-   margin-left: 39px;
+  .itwo {
+    display: none;
+    margin-left: 39px;
   }
-  .hone{
+  .hone {
     margin-top: 220px;
     width: 339px;
     height: 96px;
     margin-left: 39px;
   }
-  .pone{
+  .pone {
     margin-top: 350px;
     margin-left: 39px;
   }
-  .btwo{
+  .btwo {
     margin-top: 467px;
     margin-left: 39px;
   }
-  .htwo{
+  .htwo {
     margin-top: 478px;
     margin-left: 251px;
   }
-  .done{
-    background-image: url(/typemaster/assets/tablet/image-phone-and-keyboard.jpg);
+  .done { 
     width: 214px;
     height: 320px;
     margin-top: -215px;
     border-radius: 20px;
     margin-left: 39px;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
-  .dtwo{
+  .isix{
+    display: flex;
+    width: 214px;
+    height: 320px;
+    border-radius: 20px;
+  }
+  .done::after{
+  content: "";
+  height: 320px;
+  width: 214px;
+  background: #f16718;
+  position: absolute;
+  z-index: 10;
+  border-radius:20px; 
+  transform: translateX(-.5%);
+  left: 0px;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+  margin-top: -320px;
+}
+  .iseven{
+    display: none;
+  }
+  .dtwo {
     background-image: url(/typemaster/assets/tablet/image-glass-and-keyboard.jpg);
     width: 445px;
     height: 320px;
@@ -356,79 +403,217 @@ body {
     border-radius: 20px;
     background-size: cover;
   }
-  .hthree{
+  .hthree {
     text-align: left;
     margin-left: -21px;
     margin-top: -80px;
   }
-  .ptwo{
+  .ptwo {
     margin-left: 300px;
     text-align: left;
     width: 400px;
     margin-top: 1032px;
   }
-  .dthree{
+  .dthree {
     margin-left: 39px;
     margin-top: 1267px;
   }
-  .hfour{
+  .hfour {
     text-align: left;
     margin-left: 39px;
     margin-top: 1372px;
   }
-  .pthree{
+  .pthree {
     text-align: left;
     margin-left: 39px;
     margin-top: 1452px;
     width: 281px;
   }
-  .dfour{
+  .dfour {
     margin-left: 389px;
     margin-top: 1267px;
   }
-  .hfive{
+  .hfive {
     text-align: left;
     margin-left: 389px;
     margin-top: 1372px;
   }
-  .pfour{
+  .pfour {
     text-align: left;
     margin-left: 389px;
     margin-top: 1452px;
     width: 281px;
   }
-  .dfive{
+  .dfive {
     margin-left: 39px;
     margin-top: 1630px;
   }
-  .hsix{
+  .hsix {
     text-align: left;
     margin-left: 39px;
     margin-top: 1742px;
   }
-  .pfive{
+  .pfive {
     margin-left: 39px;
     margin-top: 1822px;
     text-align: left;
     width: 281px;
   }
-  .dsix{
+  .dsix {
     margin-top: 1630px;
     margin-left: 389px;
   }
-  .hseven{
+  .hseven {
     margin-left: 389px;
     margin-top: 1742px;
     text-align: left;
   }
-  .psix{
+  .psix {
     margin-left: 389px;
     text-align: left;
     margin-top: 1822px;
     width: 281px;
   }
-  .pseven{
+  .pseven {
     margin-top: 2059px;
     margin-left: 250px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url(/typemaster/assets/desktop/image-keyboard.jpg);
+    background-size: 540px, 480px;
+    background-position-x: 735px;
+    background-position-y: 196px;
+  }
+  .ione {
+    margin-left: 165px;
+  }
+  .bone {
+    margin-left: 1100px;
+  }
+  .hone {
+    margin-left: 138px;
+  }
+  .pone {
+    margin-left: 165px;
+    width: 400px;
+  }
+  .bone:hover {
+    cursor: pointer;
+    background-color: #162542;
+    color: white;
+  }
+  .btwo {
+    margin-left: 165px;
+    width: 175px;
+  }
+  .htwo {
+    margin-left: 380px;
+  }
+  .done {
+    margin-left: 165px;
+    width: 255px;
+    height: 480px;
+    margin-top: -120px;
+    margin-left: 165px;
+  }
+  .ifive{
+    display: flex;
+    width:255px;
+    height: 480px;
+    border-radius: 20px;
+  }
+  .done::after{
+    content: "";
+    height: 480px;
+    width: 255px;
+    background: #f16718;
+    position: absolute;
+    z-index: 10;
+    border-radius:20px; 
+    transform: translateX(-.1%);
+    left: 0px;
+    opacity: 0.75;
+    mix-blend-mode: multiply;
+    margin-top: -480px;
+  }
+  .isix{
+    display: none;
+  }
+  .dtwo {
+    background-image: url(/typemaster/assets/desktop/image-glass-and-keyboard.jpg);
+    width: 455px;
+    height: 480px;
+    margin-top: -120px;
+    margin-left: 300px;
+  }
+  .hthree {
+    margin-top: -250px;
+    margin-left: 980px;
+  }
+  .ptwo {
+    margin-top: 990px;
+    margin-left: 1040px;
+    width: 255px;
+  }
+  .dthree{
+    margin-left: 165px;
+    margin-top: 1354px;
+  }
+  .hfour{
+    margin-left: 165px;
+    margin-top:1450px ;
+  }
+  .pthree{
+    margin-left: 165px;
+    margin-top: 1530px;
+    width: 255px;
+  }
+  .dfour{
+    margin-top: 1354px;
+    margin-left: 450px;
+  }
+  .hfive{
+    margin-left: 450px;
+    margin-top: 1450px;
+  }
+  .pfour{
+    margin-top:1530px;
+    margin-left: 450px;
+    width: 255px;
+  }
+  .dfive{
+    margin-top: 1354px;
+    margin-inline: 735px;
+  }
+  .hsix{
+    margin-left: 750px;
+    margin-top: 1450px;
+  }
+  .pfive{
+    margin-left: 750px;
+    margin-top: 1530px;
+    width: 255px;
+  }
+  .dsix{
+    margin-top: 1354px;
+    margin-left:1050px ;
+  }
+  .hseven{
+    margin-left: 1050px;
+    margin-top: 1450px;
+  }
+  .psix{
+    margin-left: 1050px;
+    margin-top: 1530px;
+    width: 255px;
+  }
+  .pseven{
+    margin-top: 1805px;
+    margin-left: 568px;
   }
 }
